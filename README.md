@@ -15,3 +15,4 @@ If you don't have yet the Yeoman tool, you should install it first :
 **yo titaniumburger**
 
 Then answer all questions 
+
