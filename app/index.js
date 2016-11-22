@@ -4,6 +4,7 @@ var path = require('path');
 var memFs = require('mem-fs');
 var editor = require('mem-fs-editor');
 var exec = require('child_process').exec;
+var chalk = require('chalk');
 
 var store = memFs.create();
 var fs = editor.create(store);
@@ -82,7 +83,7 @@ module.exports = generators.Base.extend({
             }, {
                 type:    'input',
                 name:    'url',
-                message: 'What is the URL for the project wenpage (if any)'
+                message: 'What is the URL for the project webpage (if any)'
             }, {
                 type:    'input',
                 name:    'copyright',
@@ -92,7 +93,7 @@ module.exports = generators.Base.extend({
                 name:    'sdk',
                 message: 'Titanium SDK:',
                 choices: ti
-            }, {
+            }/*, {
                 type:    'checkbox',
                 name:    'options',
                 message: 'Extras:',
@@ -109,7 +110,7 @@ module.exports = generators.Base.extend({
                         value:   'use_server',
                         checked: false
                         }]
-                }];
+                }*/];
                        
                 return this.prompt(prompts, function (props) {
                     this.author      = props.author;
@@ -130,28 +131,33 @@ module.exports = generators.Base.extend({
         },
                                         
         method2: function() {
-        console.log('Copying templates');
-        //console.log('bundle_id'+bundle_id);
-        this.fs.copy(
-            this.templatePath(),
-            this.destinationPath()
-        );
-        this.fs.copyTpl(
-            this.templatePath('tiapp.xml'),
-            this.destinationPath('tiapp.xml'),
-            { GUID: generateGUID(),
-            ID: asks.bundle_id,
-            APPNAME:asks.appname,
-            VERSION:asks.version,
-            PUBLISHER:asks.publisher,
-            URL: asks.url,
-            DESCRIPTION:asks.description,
-            COPYRIGHT:asks.copyright,
-            SDK:asks.sdk[0]
+            console.log(chalk.underline.bgBlue('Copying templates...'));
+            this.fs.copy(
+                this.templatePath(),
+                this.destinationPath()
+            );
+            this.fs.copyTpl(
+                this.templatePath('tiapp.xml'),
+                this.destinationPath('tiapp.xml'),
+                { 
+                    GUID: generateGUID(),
+                    ID: asks.bundle_id,
+                    APPNAME:asks.appname,
+                    VERSION:asks.version,
+                    PUBLISHER:asks.publisher,
+                    URL: asks.url,
+                    DESCRIPTION:asks.description,
+                    COPYRIGHT:asks.copyright,
+                    SDK:asks.sdk[0]
+                }
+            );
+        },
+
+        end: function() {
+            console.log('');
+            console.log('You need to register the application: '+chalk.green('appc new --import'));
+            console.log('');
+            console.log('For running the application: '+chalk.green('appc run'));
         }
-        );
-        console.log('You need to register the application: appc new --import');
-        console.log('');
-        console.log('For running the application: appc run');                
-        }
+        
 });
