@@ -1,0 +1,10 @@
+<Alloy>
+	<Window class="container" id="win">
+		<ImageView />
+		<Label class="slogan" />
+
+		<Button class="btn" title="Connexion" onClick="openLogin" />
+		<Button class="btn" title="Inscription" onClick="openSignup" />
+		<Button class="btn" title="Accéder à l'accueil" onClick="openHome" />
+	</Window>
+</Alloy>

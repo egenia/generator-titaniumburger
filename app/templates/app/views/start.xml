@@ -1,0 +1,8 @@
+<Alloy>
+	<NavigationWindow platform="ios" id="nav">
+		<Require src="partials/_start" type="view" id="start" />
+	</NavigationWindow>
+
+	<Require src="partials/_start" type="view" id="start" platform="android" />
+
+</Alloy>

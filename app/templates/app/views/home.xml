@@ -1,0 +1,30 @@
+<Alloy>
+	<Widget id="drawer" src="nl.fokkezb.drawer">
+
+		<Require type="view" id="menu" src="partials/_menu" onClick="loadView" />
+
+		<NavigationWindow id="nav" role="centerWindow" platform="ios">
+		<Window module="xp.ui" id="mainWindow">
+			<View id="statusBar" platform="ios" class="statusBarCloseNotConnected" />
+			<View id="menuBar">
+				<Button onClick="toggle" type="Left" id="btnLeft" class="leftCloseNotConnected" />
+				<Label id="titleWindow" />
+				<ImageView id="logo" />
+				<Button onClick="toggle" id="btnRight" class="rightClose" />
+			</View>
+			<View id="contentWrapper" />
+		</Window>
+		</NavigationWindow>
+
+		<Window module="xp.ui" id="mainWindow" role="centerWindow" platform="android">
+			<View id="menuBar">
+				<Button onClick="toggle" type="Left" id="btnLeft" class="leftCloseNotConnected" />
+				<Label id="titleWindow" />
+				<ImageView id="logo" />
+				<Button onClick="toggle" id="btnRight" class="rightClose" />
+			</View>
+			<View id="contentWrapper" />
+		</Window>
+
+	</Widget>
+</Alloy>

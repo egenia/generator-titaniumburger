@@ -1,0 +1,34 @@
+{
+	"global": {
+		"FONTS": {
+			"light": "Helvetica-Light",
+			"regular": "Helvetica-Regular",
+			"bold": "Helvetica-Bold"
+    },
+    "COLORS": {
+      "main": "white",
+      "main2": "gray",
+			"text" : "#262626",
+			"gray" : "#5c5c5c"
+    }
+	},
+	"env:development": {
+		"baseurl": "https://www.squirrel.fr/"
+	},
+	"env:test": {
+		"baseurl": "https://www.squirrel.fr/"
+	},
+	"env:production": {
+		"baseurl": "https://www.squirrel.fr/"
+	},
+	"os:android": {},
+	"os:blackberry": {},
+	"os:ios": {},
+	"os:mobileweb": {},
+	"os:windows": {},
+	"dependencies": {
+		"nl.fokkezb.drawer": "*",
+    "nl.fokkezb.loading": "*",
+    "de.manumaticx.pagingcontrol": "*"
+	}
+}

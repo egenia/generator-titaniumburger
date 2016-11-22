@@ -1,0 +1,45 @@
+
+"#win" : {
+	backgroundColor : Alloy.CFG.COLORS.menuBg
+}
+
+"ListView" : {
+	willScrollOnStatusTap: true,
+	backgroundColor : "blue",
+	left : 0,
+	right : 0,
+	top : Alloy.Globals.theTop,
+	bottom : 0,
+	separatorColor : 'transparent',
+	tableSeparatorInsets : { left : 0, right : 0 }
+}
+
+".img":{
+	left : 45
+}
+
+".title":{
+	left : 90
+}
+
+".noicon":{
+	left : 45,
+}
+
+".active":{
+  color : Alloy.CFG.COLORS.menuTextActiv,
+	font : { fontFamily: Alloy.CFG.FONTS.semibold, fontSize: '19sp' }
+}
+
+".inactive":{
+  color : Alloy.CFG.COLORS.menuTextInactiv,
+	font : { fontFamily: Alloy.CFG.FONTS.regular, fontSize: '19sp' }
+}
+
+".border":{
+  left : 0,
+  top : 0,
+  bottom : 0,
+  width : 3,
+  backgroundColor : Alloy.CFG.COLORS.menuBorder
+}

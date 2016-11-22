@@ -1,0 +1,14 @@
+{
+  "name": "generator-titaniumburger",
+  "version": "0.1.0",
+  "description": "",
+  "file": [
+    "app"
+  ],
+  "main": "index.js",
+  "keywords": ["yeoman-generator","titanium"],
+  "license": "ISC",
+  "dependencies": {
+    "yeoman-generator": "^0.24.1"
+  }
+}

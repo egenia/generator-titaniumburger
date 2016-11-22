@@ -1,0 +1,33 @@
+<Alloy>
+	<Window module="xp.ui" role="leftWindow" id="win" backgroundColor="red">
+
+      <ListView id="listview" defaultItemTemplate="inactiveTemplateWithIcon" onItemclick="handleClick">
+
+				<Templates>
+
+					<ItemTemplate name="inactiveTemplateWithIcon">
+						<ImageView bindId="image" class="img" />
+						<Label bindId="title" class="title inactive" />
+					</ItemTemplate>
+
+					<ItemTemplate name="activeTemplateWithIcon">
+						<View class="border" />
+						<ImageView bindId="image" class="img" />
+						<Label bindId="title" class="title active" />
+					</ItemTemplate>
+
+					<ItemTemplate name="inactiveTemplateWithoutIcon">
+						<Label bindId="title" class="title noicon inactive" />
+					</ItemTemplate>
+
+					<ItemTemplate name="activeTemplateWithoutIcon">
+						<View class="border" />
+						<Label bindId="title" class="title noicon active" />
+					</ItemTemplate>
+
+        </Templates>
+
+  	</ListView>
+
+    </Window>
+</Alloy>

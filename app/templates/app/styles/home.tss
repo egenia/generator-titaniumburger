@@ -1,0 +1,75 @@
+"#drawer[platform=ios]": {
+  centerHiddenInteractionMode : "OPEN_CENTER_MODE_NAVBAR", //OPEN_CENTER_MODE_NONE, OPEN_CENTER_MODE_FULL
+  openDrawerGestureMode: "OPEN_MODE_BEZEL_PANNING_CENTERWINDOW", //OPEN_MODE_NONE, OPEN_MODE_PANNING_NAVBAR, OPEN_MODE_PANNING_CENTERWINDOW, OPEN_MODE_BEZEL_PANNING_CENTERWINDOW
+  closeDrawerGestureMode: "CLOSE_MODE_ALL", //CLOSE_MODE_TAP_CENTERWINDOW, CLOSE_MODE_ALL, CLOSE_MODE_PANNING_NAVBAR
+  leftDrawerWidth: Alloy.Globals.drawerWidth,
+  rightDrawerWidth: Alloy.Globals.drawerWidth,
+  animationMode : "ANIMATION_SLIDE_SCALE" //ANIMATION_SLIDE_SCALE, ANIMATION_SLIDE , ANIMATION_FADE, ANIMATION_PARALLAX_FACTOR_7, ANIMATION_PARALLAX_FACTOR_3, ANIMATION_NONE
+}
+
+"#drawer[platform=android]": {
+  //openDrawerGestureMode: "OPEN_MODE_MARGIN", //OPEN_MODE_NONE, OPEN_MODE_MARGIN
+  //closeDrawerGestureMode: "CLOSE_MODE_MARGIN", //CLOSE_MODE_ALL, CLOSE_MODE_NONE, CLOSE_MODE_MARGIN
+  hideToolbar : true,
+  drawerIndicatorEnabled : false,
+  leftDrawerWidth: 320,
+  rightDrawerWidth: 320,
+  parallaxAmount : 0.3,
+  drawerLayout : false,
+  animationMode : "ANIMATION_ZOOM" // ANIMATION_SCALE, ANIMATION_ZOOM, ANIMATION_SLIDEUP, ANIMATION_NONE
+}
+
+"#statusBar":{
+	left : 0,
+	right : 0,
+	top : 0,
+	height : 20,
+	visible : Alloy.Globals.iOS7,
+  backgroundColor : "white"
+}
+
+"#menuBar":{
+	left : 0,
+	right : 0,
+	height : 58
+}
+
+"#btnLeft":{
+  title : 'Menu',
+	left : 0,
+	top : 0,
+	bottom : 0,
+	width : '17%'
+}
+
+"#titleWindow":{
+	left : '17%',
+	right : '18%',
+  textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font : { fontSize : '20sp', fontFamily : Alloy.CFG.FONTS.bold },
+	color : "black"
+}
+
+"#logo":{
+  visible : false,
+	image : '/images/common/logo.png'
+}
+
+"#btnRight":{
+	right : 0,
+	top : 0,
+	bottom : 0,
+	width : '17%',
+  backgroundImage : '/images/common/menu_right.png',
+}
+
+"#contentWrapper":{
+	left : 0,
+	right : 0,
+	bottom : 0
+}
+
+"#mainWindow": {
+  navBarHidden: true,
+  layout: "horizontal"
+}
